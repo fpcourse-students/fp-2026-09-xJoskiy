@@ -1,0 +1,12 @@
+-- | Область видимости для @make repl@: GHCi открывает этот модуль, а вместе
+-- с ним всё, что импортировано сюда, то есть все уровни домашки сразу.
+-- Редактировать не нужно; одноимённые функции разных уровней различайте
+-- квалификацией: @Level1.f@, @Level2.f@.
+module Repl () where
+
+import Level1
+import Parser
+import Level2
+import Level3
+import Lexer
+import MyIO
